@@ -49,7 +49,7 @@ class ReportController extends AbstractController
             if(count($result)!=null)
                 return new JsonResponse($result);
             else
-                return $this->createErrorResponse('Impossible to make a report, no data available');
+                return $this->createErrorResponse('You must have atleast one account');
         }
         else{
             $report = $this->reportService->getReport($user,$params);
