@@ -32,7 +32,10 @@ CREATE TABLE `transaction` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `Report` (
-  `Day` varchar(45) DEFAULT NULL,
+  `Id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Year` int(11) DEFAULT NULL,
+  `Month` int(11) DEFAULT NULL,
+  `Day` varchar(45) DEFAULT '',
   `User` int(11) NOT NULL,
   `Account` int(11) DEFAULT NULL,
   `Category` int(11) DEFAULT NULL,
@@ -40,8 +43,5 @@ CREATE TABLE `Report` (
   `Avg_amount` float NOT NULL,
   `Start_amount` float NOT NULL,
   `End_amount` float NOT NULL,
-  `Month` int(11) DEFAULT NULL,
-  `Year` int(11) DEFAULT NULL,
-  `Id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
