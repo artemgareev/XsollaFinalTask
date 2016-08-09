@@ -114,7 +114,7 @@ class ReportRepository extends AbstractRepository
             $report->avg_amount =$result['avg'];
             $fetchMMamount = 'SELECT amount FROM transaction WHERE id=? LIMIT 1';
             $report->start_amount  = $this->dbConnection->fetchArray($fetchMMamount,[$result['min']])[0];
-            $report->end_amount  = $this->dbConnection->fetchArray($fetchMMamount,[$result['min']])[0];
+            $report->end_amount  = $this->dbConnection->fetchArray($fetchMMamount,[$result['max']])[0];
 
         }
         catch(DBALException $e) {
