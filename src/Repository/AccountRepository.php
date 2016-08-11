@@ -20,7 +20,7 @@ class AccountRepository extends AbstractRepository
         $querry = 'SELECT id,currency,balance,user,name FROM account WHERE user=?';
         $accounts = $this->dbConnection->fetchAll($querry.$querryParams,[$user->id]);
         return !is_null($accounts[0]) ? array_map(function($accounts){
-            return new Account($accounts["id"], $accounts["user"], $accounts["currency"], $accounts["balance"], $accounts["name"]);
+            return new Account($accounts["id"], $accounts["currency"], $accounts["balance"], $accounts["user"], $accounts["name"]);
         }, $accounts) : array();
 
     }
