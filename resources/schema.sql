@@ -44,4 +44,5 @@ CREATE TABLE `Report` (
   `Start_amount` float NOT NULL,
   `End_amount` float NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
